@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: transparent;
+  border: 0;
+}
+
+body {
+  background: #f9f8f8;
+}
+
+#app {
+  width: 452px;
+  height: 452px;
+  margin: 50 auto;
+}
+#grid {
+  background: #fff;
+  border: 1px solid gray;
+  box-sizing: content-box;
+}
+.column {
+  border: 1px solid gray;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+}
+
+.column:hover {
+  background: #e2e8ec;
+}
+
+.column-2,
+.column-5 {
+  border-right: 2px solid black;
+}
+
+.row-2,
+.row-5 {
+  border-bottom: 2px solid black;
+}
+
+.column > input[type="number"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+
+.inValid {
+  color: red;
+}
+
+#grid2 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 2px 2px;
+  background-color: gray;
+  border: 2px solid gray;
+}
+
+.cell {
+  position: relative;
+  text-align: center;
+  background-color: #F9F8F8;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+.displayValue {
+  font-size: 2em;
+  position: relative;
+  background-color: #F9F8F8;
+}
+
+.inputCell {
+  background: #fff;
+}
+
+.ruf {
+  display: grid;
+  grid-template-areas: 
+    "p1 p2 b p3"
+    "p4 p5 b p6"
+    "p7 p8  . p9";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  color: gray;
+}
+
+.ruf-1 {
+  grid-area: p1;
+}
+
+.ruf-2 {
+  grid-area: p2;
+}
+
+.ruf-3 {
+  grid-area: p3;
+}
+
+.ruf-4 {
+  grid-area: p4;
+}
+
+.ruf-5 {
+  grid-area: p5;
+}
+
+.ruf-6 {
+  grid-area: p6;
+}
+
+.ruf-7 {
+  grid-area: p7;
+}
+
+.ruf-8 {
+  grid-area: p8;
+}
+
+.ruf-9 {
+  grid-area: p9;
+}
+
+.b {
+  grid-area: b;
+  width: 2px;
+  background-color: green !important;
+}
+
+.controls {
+  margin: 10px;
+  padding: 10px;
+}
+
+.controls > button {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+button#pencil.active {
+  background-color: #bdbde2;
+}
